@@ -1,0 +1,33 @@
+.input_img {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.input {
+  display: grid;
+  place-content: center;
+  background: url("—Pngtree—food\ spicy\ and\ seductive\ lobster_912702.jpg");
+  color: white;
+  font-family: "Amaranth";
+  background-size: cover;
+  background-position: left;
+  height: 100vh;
+}
+strong {
+  font-size: 40px;
+  text-align: center;
+}
+
+.button {
+  font-size: 16px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.516);
+  color: white;
+  padding: 10px;
+  border-radius: 30px;
+}
+.button:hover {
+  background-color: #ffffffec;
+  color: black;
+}

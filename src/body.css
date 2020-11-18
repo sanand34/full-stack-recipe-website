@@ -1,0 +1,16 @@
+.body {
+  display: flex;
+}
+
+.mainbody {
+  display: grid;
+  place-items: center;
+  width: "100%";
+  overflow-x: scroll;
+}
+.headbody {
+  padding: 50px;
+  padding-right: 0px;
+  padding-left: 0px;
+  text-align: center;
+}

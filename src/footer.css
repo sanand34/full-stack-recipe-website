@@ -1,0 +1,15 @@
+.footer {
+  height: 400px;
+  display: grid;
+  place-content: center;
+  padding-top: 50px;
+  display: flex;
+  border-top: solid;
+  border-color: rgb(203, 203, 203);
+  border-width: 2px;
+}
+
+.link .MuiIconButton-root {
+  background-color: black;
+  box-shadow: -1px 4px 20px -6px #0b0a0a;
+}

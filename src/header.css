@@ -1,0 +1,19 @@
+.header {
+  text-align: center;
+
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(22, 15, 26, 0.461),
+    rgb(22, 15, 26)
+  );
+}
+
+.avatar {
+  border: solid 5px;
+  border-color: white;
+}
+.avatar:hover {
+  border: solid 5px;
+  border-color: rgba(100, 64, 60, 0.653);
+}

@@ -1,0 +1,35 @@
+.button {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.516);
+  color: white;
+  padding: 10px;
+  border-radius: 30px;
+  margin-top: 100px;
+  max-width: 300px;
+}
+.button strong {
+  font-size: 16px;
+}
+.button:hover {
+  background-color: #ffffffec;
+  color: black;
+}
+
+img {
+  width: 40px;
+  margin-right: 10px;
+}
+.login {
+  background: url(—Pngtree—black\ meat\ western\ food\ banner_1013905.jpg);
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: left;
+}
+h1 > strong {
+  color: white;
+  font-size: 110px;
+  font-family: "Amaranth";
+}

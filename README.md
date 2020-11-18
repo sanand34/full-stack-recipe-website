@@ -1,3 +1,16 @@
+
+Link to the webpage-https://food-3944a.web.app/
+
+#Frontend : ReactJS
+
+#Backend : Google Cloud Firestore
+
+#Authentication : Google Autenticator
+
+#Deployed on Firebase
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

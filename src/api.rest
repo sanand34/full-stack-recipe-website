@@ -1,5 +1,0 @@
-//https://api.edamam.com/search?q=italian&app_id=db6a1b1c&app_key=b28b44833994a4c1b472816279157248&from=0&to=3
-
-//https://api.edamam.com/api/nutrition-data?app_id=9e39f750&app_key=0ced70328ce49019072095900721cedd&ingr=1%20large%20meat
-
-https://www.youtube.com/watch?v=3Xq_QfYdmMQ

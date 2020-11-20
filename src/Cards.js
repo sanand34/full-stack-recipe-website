@@ -10,7 +10,7 @@ function Cards({ taste }) {
   const random = Math.floor(Math.random() * 9);
   useEffect(() => {
     async function fetchData() {
-      const request = await instance.get(requests(taste, random + 20, random));
+      const request = await instance.get(requests(taste, random + 10, random));
       setData(request.data.hits);
     }
     fetchData();

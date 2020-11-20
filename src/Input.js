@@ -15,7 +15,7 @@ function Input() {
           dispatch({
             type: actionTypes.SET_ITEM,
             item: doc.data().food[
-              Math.floor(Math.random() * doc.data().food.length)
+              Math.floor(Math.random() * doc.data().food.length-1)
             ],
           });
         }

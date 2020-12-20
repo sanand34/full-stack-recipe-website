@@ -7,25 +7,28 @@ import "./input.css";
 function Input() {
   const [{ user }, dispatch] = useStateValue();
   const [value, setValue] = useState(null);
-  useEffect(() => {
-    console.log(user);
-    db.collection("rooms").onSnapshot((snapshot) => {
-      snapshot.docs.map((doc) => {
-        if (doc.id === user.email) {
-          dispatch({
-            type: actionTypes.SET_ITEM,
-            item: doc.data().food[
-              Math.floor(Math.random() * doc.data().food.length-1)
-            ],
-          });
-        }
+  useEffect(async () => {
+    const doc = await db.collection("rooms").doc(user.email).get();
+    if (!doc.exists) {
+      console.log("No Data");
+    } else {
+      dispatch({
+        type: actionTypes.SET_ITEM,
+        item: doc.data().food[
+          Math.floor(Math.random() * doc.data().food.length)
+        ],
       });
-    });
+    }
   }, []);
   function createAccount() {
     db.collection("rooms")
       .doc(user.email)
       .set({ name: user.displayName, food: [value] });
+
+    dispatch({
+      type: actionTypes.SET_ITEM,
+      item: value,
+    });
   }
 
   return (
@@ -57,10 +60,6 @@ function Input() {
         className="button"
         onClick={() => {
           createAccount();
-          dispatch({
-            type: actionTypes.SET_ITEM,
-            item: value,
-          });
         }}
       >
         Create Account
@@ -70,17 +69,3 @@ function Input() {
 }
 
 export default Input;
-
-/* useEffect(() => {
-    db.collection("rooms").onSnapshot((snapshot) => {
-      snapshot.docs.map((doc) => {
-        console.log(doc.data());
-        if (doc.id == user.displayName) {
-          dispatch({
-            type: actionTypes.SET_ITEM,
-            item: doc.data.food,
-          });
-        }
-      });
-    });
-  }, []); */

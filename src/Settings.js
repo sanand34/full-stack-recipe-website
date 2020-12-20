@@ -15,14 +15,13 @@ function Settings() {
       .doc(user.email)
       .update({ food: firebase.firestore.FieldValue.arrayUnion(value) });
   };
-  useEffect(() => {
-    db.collection("rooms").onSnapshot((snapshot) => {
-      snapshot.docs.map((doc) => {
-        if (doc.id === user.email) {
-          setHistory(doc.data().food);
-        }
+  useEffect(async () => {
+    await db
+      .collection("rooms")
+      .doc(user.email)
+      .onSnapshot((snapshot) => {
+        setHistory(snapshot.data().food);
       });
-    });
   }, [istrue]);
 
   return (
